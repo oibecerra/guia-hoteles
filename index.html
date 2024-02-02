@@ -2,15 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Bootstrap demo</title>
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<h1>Hello, world!</h1>
+<div class="jumbotron">
+    <h1>Hoteles</h1>
+</div>
+
+<div class="container">
+    <div class="d-flex">
+        <div class="col-sm-4">
+            <p>
+                <h3>¿Cómo funciona?</h3>
+                <p>Busca los hoteles de acuerdo a tu preferencia</p>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <p>
+                <h3>¿Dónde puedo reservar?</h3>
+                <p>Elige la ciudad que te interese y luego realiza la reserva con tus datos.</p>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <p>
+                <h3>¿Cómo pago?</h3>
+                <p>Utiliza tu tarjeta favorita.</p>
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="d-flex flex-wrap">
+        <div class="card-hotel d-flex flex-column justify-content-between">
+            <div>
+                <h4>Hotel Barcelona 1</h4>
+                <p>Hotel ubicado en el centro de Barcelona.</p>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-reserva">Reservar</button>
+            </div>
+        </div>
+        <div class="card-hotel d-flex flex-column justify-content-between">
+            <div>
+                <h4>Hotel Barcelona 2</h4>
+                <p>Hotel ubicado en el centro de Barcelona.</p>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-reserva">Reservar</button>
+            </div>
+        </div>
+        <div class="card-hotel d-flex flex-column justify-content-between">
+            <div>
+                <h4>Hotel Barcelona 3</h4>
+                <p>Hotel ubicado en el centro de Barcelona.</p>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-reserva">Reservar</button>
+            </div>
+        </div>
+        <div class="card-hotel d-flex flex-column justify-content-between">
+            <div>
+                <h4>Hotel Barcelona 4</h4>
+                <p>Hotel ubicado en el centro de Barcelona.</p>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-reserva">Reservar</button>
+            </div>
+        </div>
+        <div class="card-hotel d-flex flex-column justify-content-between">
+            <div>
+                <h4>Hotel Barcelona 5</h4>
+                <p>Hotel ubicado en el centro de Barcelona Hotel ubicado en el centro de Barcelona.</p>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-reserva">Reservar</button>
+            </div>
+        </div>
+        <div class="card-hotel d-flex flex-column justify-content-between">
+            <div>
+                <h4>Hotel Barcelona 6</h4>
+                <p>Hotel ubicado en el centro de Barcelona.</p>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-reserva">Reservar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="row">
+        <div class="col-sm-4 d-flex flex-column">
+            <a href="https://www.facebook.com">Facebook</a>
+            <a href="https://www.twitter.com">Twitter</a>
+            <a href="https://www.instagram.com">Instagram</a>
+            <a href="https://www.google.com">Google+</a>
+        </div>
+        <div class="col-sm-4">
+            <address>
+                Barcelona, Santiago de Chile.
+                +56936334513
+            </address>
+        </div>
+        <div class="col-sm-4 d-flex flex-column align-items-end">
+            <a href="https://www.facebook.com">Nosotros</a>
+            <a href="https://www.twitter.com">Contacto</a>
+            <a href="https://www.instagram.com">Precios</a>
+            <a href="https://www.instagram.com">Escríbennos</a>
+        </div>
+    </div>
+</footer>
+
 <!-- Javascript -->
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="node_modules/popper.js/dist/popper.min.js"></script>
 <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
+
 </html>
