@@ -34,7 +34,50 @@
             <li class="breadcrumb-item active" aria-current="page"><a>Contacto</a></li>
         </ol>
     </nav>
-    <span>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</span>
+    <h1>Déjame tu comentario</h1>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-sm-9">
+                <label for="direccion">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Ingrese su domicilio">
+            </div>
+            <div class="form-group col-sm-3">
+                <label for="provincia">Provincia</label>
+                <select id="provincia" class="form-control">
+                    <option selected>Capital Federal</option>
+                    <option selected>Buenos Aires</option>
+                    <option selected>Córdoba</option>
+                    <option selected>Santa Fé</option>
+                    <option selected>Mendoza</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comentario">Comentario</label>
+            <textarea id="comentario" class="form-control" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">Quiero que me contacten</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-outline-primary"> Enviar</button>
+    </form>
 </div>
 
 <footer class="footer">
