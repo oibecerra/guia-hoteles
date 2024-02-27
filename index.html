@@ -28,13 +28,21 @@
     <h1>Hoteles</h1>
 </div>
 <div class="container">
-    <img src="images/banner.png" class="img-fluid" alt="Responsive image">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page"><a>Home</a></li>
-        </ol>
-    </nav>
 
+<!--    <img src="images/banner.png" class="img-fluid" alt="Responsive image">-->
+<!--    <nav aria-label="breadcrumb">-->
+<!--        <ol class="breadcrumb">-->
+<!--            <li class="breadcrumb-item active" aria-current="page"><a>Home</a></li>-->
+<!--        </ol>-->
+<!--    </nav>-->
+
+    <div id="carouselControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/banner.png">
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-sm-4">
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#funciona"
@@ -174,13 +182,13 @@
         <div class="card card-hotel d-flex flex-column justify-content-between mr-2">
             <img class="card-img-top" src="images/hotel3.png" alt="Hotel img">
             <div class="card-body">
-                <h5 class="card-title">Hotel Barcelona 10</h5>
+                <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Las primeras reservas cuentan con clases gratis">Hotel Barcelona 10</h5>
                 <h6 class="card-subtitle text-muted">España</h6>
                 <p>Hotel ubicado en el centro de Barcelona.</p>
                 <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#contacto">Contacto</button>
             </div>
             <div>
-                <button class="btn btn-primary btn-reserva"><span class="oi oi-plus footer-address-icon"></span>Reservar</button>
+                <button class="btn btn-primary btn-reserva" data-toggle="popover" title="promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-plus footer-address-icon"></span>Reservar</button>
             </div>
         </div>
     </div>
@@ -243,6 +251,12 @@
 <script src="node_modules/jquery/dist/jquery.min.js" ></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $("[data-toggle='tooltip']").tooltip();
+        $("[data-toggle='popover']").popover();
+    });
+</script>
 </body>
 
 
