@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
 </head>
 <body>
@@ -29,28 +29,6 @@
 </div>
 <div class="container">
 
-<!--    <img src="images/banner.png" class="img-fluid" alt="Responsive image">-->
-<!--    <nav aria-label="breadcrumb">-->
-<!--        <ol class="breadcrumb">-->
-<!--            <li class="breadcrumb-item active" aria-current="page"><a>Home</a></li>-->
-<!--        </ol>-->
-<!--    </nav>-->
-
-    <div class="row">
-        <div class="col-sm-4">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#funciona"
-                    aria-expanded="false" aria-controls="multiCollapse1">¿Cómo funciona?</button>
-        </div>
-        <div class="col-sm-4">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reserva"
-                    aria-expanded="false" aria-controls="multiCollapse2">¿Dónde puedo reservar?</button>
-        </div>
-        <div class="col-sm-4">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pago"
-                    aria-expanded="false" aria-controls="multiCollapse3">¿Cómo pago?</button>
-        </div>
-    </div>
-    <hr>
     <div id="carouselControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -70,6 +48,22 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Siguiente</span>
             </a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#funciona"
+                    aria-expanded="false" aria-controls="multiCollapse1">¿Cómo funciona?</button>
+        </div>
+        <div class="col-sm-4">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reserva"
+                    aria-expanded="false" aria-controls="multiCollapse2">¿Dónde puedo reservar?</button>
+        </div>
+        <div class="col-sm-4">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pago"
+                    aria-expanded="false" aria-controls="multiCollapse3">¿Cómo pago?</button>
         </div>
     </div>
 
@@ -200,7 +194,7 @@
                 <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Las primeras reservas cuentan con clases gratis">Hotel Barcelona 10</h5>
                 <h6 class="card-subtitle text-muted">España</h6>
                 <p>Hotel ubicado en el centro de Barcelona.</p>
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#contacto">Contacto</button>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#contacto" id="contactoBtn" >Contacto</button>
             </div>
             <div>
                 <button class="btn btn-primary btn-reserva" data-toggle="popover" title="promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-plus footer-address-icon"></span>Reservar</button>
@@ -271,7 +265,19 @@
         $("[data-toggle='tooltip']").tooltip();
         $("[data-toggle='popover']").popover();
         $('.carousel').carousel({
-            interval: 5000
+            interval: 3000
+        });
+
+        $('#contacto').on('show.bs.modal', function (e){
+            $('#contactoBtn').removeClass('btn-outline-success');
+            $('#contactoBtn').addClass('btn-primary');
+            $('#contactoBtn').prop('disabled', true);
+        });
+
+        $('#contacto').on('hidden.bs.modal', function (e){
+            $('#contactoBtn').removeClass('btn-primary');
+            $('#contactoBtn').addClass('btn-outline-success');
+            $('#contactoBtn').prop('disabled', false);
         });
     });
 </script>

@@ -1,20 +1,25 @@
+$cyan: #4287f5;
+
+@mixin margenes($top, $bottom){
+    margin-top:$top;
+    margin-bottom:$bottom;
+}
 .jumbotron{
-    background-color: cyan;
+    background-color: $cyan;
     color: black;
-    margin-top:50px;
+    @include margenes(50px, 10px);
 }
 
 .footer{
     padding: 10px 10px 0 10px;
-    background-color: cyan;
-    margin-bottom: 0px;
-    margin-top: 10px;
+    background-color: $cyan;
+    @include margenes(10px, 0px);
 }
 
 .card-hotel{
     flex: 1 200px;
     padding: 2px 0px 2px 0px;
-    margin-top: 10px;
+    @include margenes(10px, 0px);
 }
 
 .btn-reserva{
