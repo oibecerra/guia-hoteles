@@ -1,18 +1,20 @@
-$cyan: #4287f6;
+$yellow: yellow;
+$red: red;
+$green: green;
 
 @mixin margenes($top, $bottom){
     margin-top:$top;
     margin-bottom:$bottom;
 }
 .jumbotron{
-    background-color: $cyan;
-    color: black;
+    background-color: $green;
+    color: $red;
     @include margenes(60px, 10px);
 }
 
 .footer{
     padding: 10px 10px 0 10px;
-    background-color: $cyan;
+    background-color: $yellow;
     @include margenes(10px, 0px);
 }
 
